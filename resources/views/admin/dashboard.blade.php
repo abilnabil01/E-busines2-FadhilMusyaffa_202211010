@@ -1,17 +1,47 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Admin Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.admin')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("Welcome Admin!") }}
-                </div>
+@section('title', 'Dashboard')
+
+@section('content')
+<div class="row">
+    <!-- Card Produk -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="fas fa-box fa-2x mb-2 text-success"></i>
+                <h5>Total Produk</h5>
+                <h3>54</h3>
             </div>
         </div>
     </div>
-</x-app-layout>
+
+    <!-- Card Transaksi -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="fas fa-shopping-cart fa-2x mb-2 text-warning"></i>
+                <h5>Total Transaksi</h5>
+                <h3>124</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card User -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-2x mb-2 text-primary"></i>
+                <h5>Total User</h5>
+                <h3>32</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm border-0 mt-4">
+    <div class="card-header bg-success text-white">Aktivitas Terbaru</div>
+    <div class="card-body">
+        <p>Belum ada aktivitas terbaru.</p>
+    </div>
+</div>
+@endsection
